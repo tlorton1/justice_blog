@@ -14,6 +14,12 @@ namespace JusticeWebApp
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
             routes.MapRoute(
+                name: "Blog Posts",
+                url: "Post",
+                defaults: new { controller = "Home", action = "Post"}
+                );
+
+            routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
                 defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }

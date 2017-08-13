@@ -17,7 +17,7 @@
                             </div>
                         </div>
                     </div>
-                    <img src="~/Content/Template/img/JusticeBackgrounds/justiceBackground1.jpg" class="img-responsive" alt="01">
+                    <img src="~/Content/Template/img/JusticeBackgrounds/justiceBackground1.jpg" class="img-responsive img-rounded" alt="01">
                 </div>
                 <div class="item">
                     <div class="feat-post text-center">
@@ -30,7 +30,7 @@
                             </div>
                         </div>
                     </div>
-                    <img src="~/Content/Template/img/JusticeBackgrounds/justiceBackground2.jpg" class="img-responsive" alt="01">
+                    <img src="~/Content/Template/img/JusticeBackgrounds/justiceBackground2.jpg" class="img-responsive img-rounded" alt="01">
                 </div>
                 <div class="item">
                     <div class="feat-post text-center">
@@ -43,7 +43,7 @@
                             </div>
                         </div>
                     </div>
-                    <img src="~/Content/Template/img/JusticeBackgrounds/justiceBackground3.jpg" class="img-responsive" alt="01">
+                    <img src="~/Content/Template/img/JusticeBackgrounds/justiceBackground3.jpg" class="img-responsive img-rounded" alt="01">
                 </div>
                 <div class="item">
                     <div class="feat-post text-center">
@@ -56,13 +56,15 @@
                             </div>
                         </div>
                     </div>
-                    <img src="~/Content/Template/img/JusticeBackgrounds/justiceBackground4.jpg" class="img-responsive" alt="01">
+                    <img src="~/Content/Template/img/JusticeBackgrounds/justiceBackground4.jpg" class="img-responsive img-rounded" alt="01">
                 </div>
             </div>
+            <!--/Owl Carousel-->
+            <!-- Content-->
             <div class="container">
                 <div class="row col-md-6">
                     <!--About Widget-->
-                    <div id="about-widget" class="widget widget_about">
+                    <div id="about-widget" class="widget_about">
                         <div class="text-center widget-wrap">
                             <div class="e-divider-4"></div>
                             <img class="img-circle  author-img center-block" src="~/Content/Template/img/JusticeInstagram/justiceWebsite.jpg" alt="01" width="300" height="230">
@@ -83,21 +85,29 @@
                     <!--/ About Widget-->
                     <!--Newsletter Widget-->
                     <div class="row col-md-6 ">
-                        <div id="newsletter-widget" class="widget widget_newsletterwidget text-center">
+                        <div id="newsletter-widget" class="widget_newsletterwidget text-center">
                             <div class="e-divider-4"></div>
-                            <div class="title widget-title lined">Newsletter</div>
+                            <div class="title widget-title lined" p style="margin-top: 65px;">Newsletter</div>
                             <p>Sign up to receive updates <br>and the latests news about me. I respect your privacy and don't spam.</p>
                             <div class="newsletter newsletter-widget">
                                 <form action="#">
                                     <input type="hidden" name="nr" value="widget">
                                     <div class="row">
                                         <div class="form-group col-sm-6 col-lg-offset-3">
-                                            <p><input class="newsletter-firstname" type="text" name="nn" placeholder="Name"></p>
+                                            <label class="control-label" for="name">Name:</label>
+                                            <div class="controls">
+                                                <input type="text" class="input-medium" id="name" name="name" data-val="true" data-val-required="*Required Field">
+                                                <span class="field-validation-valid" data-valmsg-for="name" data-valmsg-replace="true"></span>
+                                            </div>
                                         </div>
                                     </div>
                                     <div class="row">
                                         <div class="form-group col-sm-6 col-lg-offset-3">
-                                            <p><input class="newsletter-email" type="email" required="" name="ne" placeholder="Email"></p>
+                                            <label class="control-label" for="email">Email:</label>
+                                            <div class="controls">
+                                                <input type="email" class="input-medium" id="email" name="email" data-val="true" data-val-required="*Required Field" data-val-email="Not Valid">
+                                                <span class="field-validation-valid" data-valmsg-for="email" data-valmsg-replace="true"></span>
+                                            </div>
                                         </div>
                                     </div>
                                     <div class="row">
@@ -109,10 +119,10 @@
                             </div>
                         </div>
                         </div>
-                </div>
+                        </div>
                         <!--/Newsletter Widget-->
                         <!--Resent Posts Widget-->
-                        <div id="resent-widget" class="widget widget_recent_post text-center">
+                        <div id="resent-widget" class="widget_recent_post text-center">
                             <div class="title widget-title lined">Recent Posts</div>
                             <div class="container">
                                 <div class="col-md-4">
@@ -136,21 +146,19 @@
                                             <a href="#!"><img class="media-object center-block img-rounded" src="~/Content/Template/img/JusticeBackgrounds/justiceBackground2.jpg" alt="01" width="200" height="200"></a>
                                         </div>
                                         <div class="media-body">
-                                            <h4 class="media-heading text-center">
                                                 <span class="meta-date text-center">
                                                     <script>document.write(new Date().toLocaleDateString());</script>
                                                 </span>
-                                                <a href="#!">Enjoy Browsing Your Beautiful Photos</a>
-                                            </h4>
+                                                <h4 class="media-heading text-center">
+                                                    <a href="#!">Enjoy Browsing Your Beautiful Photos</a>
+                                                </h4>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-md-4">
                                     <div class="media">
                                         <div class="media-middle">
-                                            <a href="#!">
                                                 <a href="#!"><img class="media-object center-block img-rounded" src="~/Content/Template/img/JusticeBackgrounds/justiceBackground3.jpg" alt="01" width="200" height="200" ></a>
-                                            </a>
                                         </div>
                                         <div class="media-body">
                                             <span class="meta-date text-center">
@@ -161,54 +169,63 @@
                                     </div>
                                 </div>
                             </div>
+                            <div class="e-divider-8"></div>
                         </div>
                         <!--/Resent Posts Widget-->
                         <!--Categories Widget-->
                         <div class="container">
-                            <div class="row col-lg-6">
-                                <aside id="categories-widget" class="widget widget_categories text-center">
-                                    <div class="title widget-title lined">Categories</div>
+                            <div class="row col-lg-6 text-center">
+                                <aside id="categories-widget" class="widget_categories">
+                                    <div class="title widget-title lined text-center">Categories</div>
                                     <ul>
-                                        <li class="cat-item cat-item-2">
-                                            <a href="#!">Blogging</a> (4)
+                                        <li>
+                                            <a href="#!" class="text-center">Blogging</a>
                                         </li>
-                                        <li class="cat-item cat-item-19">
-                                            <a href="#!">Europe</a> (5)
+                                        <li>
+                                            <a href="#!" class="text-center">Europe</a>
                                         </li>
-                                        <li class="cat-item cat-item-40">
-                                            <a href="#!">Holidays</a> (2)
+                                        <li>
+                                            <a href="#!" class="text-center">Holidays</a>
                                         </li>
-                                        <li class="cat-item cat-item-3">
-                                            <a href="#!">Leadership</a> (3)
+                                        <li>
+                                            <a href="#!" class="text-center">Leadership</a>
                                         </li>
-                                        <li class="cat-item cat-item-43">
-                                            <a href="#!">Travel</a> (4)
+                                        <li>
+                                            <a href="#!" class="text-center">Travel</a>
                                         </li>
-                                        <li class="cat-item cat-item-1">
-                                            <a href="#!">Uncategorized</a> (3)
+                                        <li>
+                                            <a href="#!" class="text-center">Uncategorized</a>
                                         </li>
-                                        <li class="cat-item cat-item-7">
-                                            <a href="#!">Video</a> (2)
+                                        <li>
+                                            <a href="#!" class="text-center">Video</a>
                                         </li>
                                     </ul>
                                 </aside>
                             </div>
-                            <div class="row col-lg-6">
-                                <!--Archives Widget-->
-                                <aside id="archives-widget" class="widget widget_archive text-center">
-                                    <div class="title widget-title lined">Archives</div>
+                            <!--/Categories Widget-->
+                            <!--Archives Widget-->
+                            <div class="row col-lg-6 text-center">
+                                <aside id="archives-widget" class="widget_archive">
+                                    <div class="title widget-title lined text-center">Archives</div>
                                     <ul>
-                                        <li><a href="#!" class="text-center">August 2015</a></li>
-                                        <li><a href="#!" class="text-center">July 2015</a></li>
-                                        <li><a href="#!" class="text-center">June 2015</a></li>
-                                        <li><a href="#!" class="text-center">May 2015</a></li>
+                                        <li>
+                                            <a href="#!" class="text-center">August 2015</a>
+                                        </li>
+                                        <li>
+                                            <a href="#!" class="text-center">July 2015</a>
+                                        </li>
+                                        <li>
+                                            <a href="#!" class="text-center">June 2015</a>
+                                        </li>
+                                        <li>
+                                            <a href="#!" class="text-center">May 2015</a>
+                                        </li>
                                     </ul>
-                                </aside>
-                                <!--/Archives Widget-->
+                                </aside>                               
                             </div>
+                            <!--/Archives Widget-->
                         </div>
-                        <!--/Categories Widget-->
                     </div>
-</section>
+        </section>
+    <!--/Content-->
 </div>
-<!--/Owl Carousel-->
