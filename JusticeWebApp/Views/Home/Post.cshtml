@@ -134,19 +134,13 @@
                                                  <ul class="list-inline social share">
                                                      <!-- Social Share -->
                                                      <li>
-                                                         <a href="#!" class="rst-icon-facebook"><i class="fa fa-facebook"></i></a>
+                                                         <a target="_blank" href="https://www.facebook.com/justice.allegar" class="rst-icon-facebook"><i class="fa fa-facebook"></i></a>
                                                      </li>
                                                      <li>
-                                                         <a href="#!" class="rst-icon-twitter"><i class="fa fa-twitter"></i></a>
+                                                         <a target="_blank" href="https://www.pinterest.com/allegar/" class="rst-icon-pinterest"><i class="fa fa-pinterest"></i></a>
                                                      </li>
                                                      <li>
-                                                         <a href="#!" class="rst-icon-google-plus"><i class="fa fa-google-plus"></i></a>
-                                                     </li>
-                                                     <li>
-                                                         <a href="#!" class="rst-icon-linkedin"><i class="fa fa-linkedin"></i></a>
-                                                     </li>
-                                                     <li>
-                                                         <a class="rst-icon-pinterest" href="#!"><i class="fa fa-pinterest"></i></a>
+                                                         <a target="_blank" href="https://www.instagram.com/lovelyjlorton/" class="rst-icon-instagram"><i class="fa fa-instagram"></i></a>
                                                      </li>
                                                  </ul>
                                              </div>
@@ -323,15 +317,19 @@
                                      <div class="e-divider-4"></div>
                                      <img class="img-circle  author-img" src="assets/custom/images/userpic05.jpg" alt="01">
                                      <div class="e-divider-3"></div>
-                                     <h5 class="hello">Hi! I am Emma</h5>
+                                     <h5 class="hello">Hi! I am Justice</h5>
                                      <p>Working as a fashion designer can just as well mean supervising a design team at a sportswear company as producing a label under your own name. </p>
                                      <div class="e-divider-2"></div>
                                      <ul class="list-inline social">
-                                         <li><a target="_blank" href="#" class="rst-icon-facebook"><i class="fa fa-facebook"></i></a></li>
-                                         <li><a target="_blank" href="#" class="rst-icon-twitter"><i class="fa fa-twitter"></i></a></li>
-                                         <li><a target="_blank" href="#" class="rst-icon-pinterest"><i class="fa fa-pinterest"></i></a></li>
-                                         <li><a target="_blank" href="#" class="rst-icon-instagram"><i class="fa fa-instagram"></i></a></li>
-                                         <li><a target="_blank" href="#" class="rst-icon-youtube"><i class="fa fa-youtube"></i></a></li>
+                                         <li>
+                                             <a target="_blank" href="https://www.facebook.com/justice.allegar" class="rst-icon-facebook"><i class="fa fa-facebook"></i></a>
+                                         </li>
+                                         <li>
+                                             <a target="_blank" href="https://www.pinterest.com/allegar/" class="rst-icon-pinterest"><i class="fa fa-pinterest"></i></a>
+                                         </li>
+                                         <li>
+                                             <a target="_blank" href="https://www.instagram.com/lovelyjlorton/" class="rst-icon-instagram"><i class="fa fa-instagram"></i></a>
+                                         </li>
                                      </ul>
                                      <div class="e-divider-2"></div>
                                  </div>
@@ -345,8 +343,24 @@
                                  <div class="newsletter newsletter-widget">
                                      <form action="#">
                                          <input type="hidden" name="nr" value="widget">
-                                         <p><input class="newsletter-firstname" type="text" name="nn" placeholder="Name"></p>
-                                         <p><input class="newsletter-email" type="email" required="" name="ne" placeholder="Email"></p>
+                                         <div class="row">
+                                             <div class="form-group col-sm-12">
+                                                 <label class="control-label" for="name">Name:</label>
+                                                 <div class="controls">
+                                                     <input type="text" class="input-medium" id="name" name="name" data-val="true" data-val-required="*Required Field">
+                                                     <span class="field-validation-valid" data-valmsg-for="name" data-valmsg-replace="true"></span>
+                                                 </div>
+                                             </div>
+                                         </div>
+                                         <div class="row">
+                                             <div class="form-group col-sm-12">
+                                                 <label class="control-label" for="email">Email:</label>
+                                                 <div class="controls">
+                                                     <input type="email" class="input-medium" id="email" name="email" data-val="true" data-val-required="*Required Field" data-val-email="Not Valid">
+                                                     <span class="field-validation-valid" data-valmsg-for="email" data-valmsg-replace="true"></span>
+                                                 </div>
+                                             </div>
+                                         </div>
                                          <p><input class="newsletter-submit btn btn-rose" type="submit" value="Subscribe"></p>
                                      </form>
                                  </div>
