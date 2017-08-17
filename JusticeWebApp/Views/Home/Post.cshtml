@@ -283,17 +283,26 @@
 
                                      <form action="#" method="post" novalidate="novalidate">
                                          <div class="row">
-                                             <div class="col-md-4">
-                                                 <p><label>Name*</label><input type="text" name="your-name" value="" size="60" class="" aria-required="true" aria-invalid="false"></p>
+                                             <div class="col-md-6">
+                                                 <label class="control-label" for="name">Name:</label>
+                                                 <div class="controls">
+                                                     <input type="text" class="input-medium" id="name" name="name" data-val="true" data-val-required="*Required Field">
+                                                     <span class="field-validation-valid" data-valmsg-for="name" data-valmsg-replace="true"></span>
+                                                 </div>
                                              </div>
-                                             <div class="col-md-4">
-                                                 <p><label>Email*</label><input type="text" name="your-email" value="" size="60" class="" aria-required="true" aria-invalid="false"></p>
-                                             </div>
-                                             <div class="col-md-4">
-                                                 <p><label>Website</label><input type="text" name="your-website" value="" size="60" class="" aria-required="true" aria-invalid="false"></p>
+                                             <div class="col-md-6">
+                                                 <label class="control-label" for="email">Email:</label>
+                                                 <div class="controls">
+                                                     <input type="email" class="input-medium" id="email" name="email" data-val="true" data-val-required="*Required Field" data-val-email="Not Valid">
+                                                     <span class="field-validation-valid" data-valmsg-for="email" data-valmsg-replace="true"></span>
+                                                 </div>
                                              </div>
                                              <div class="col-md-12">
-                                                 <p><label>Message</label><textarea name="your-message" cols="60" rows="3" class="" aria-invalid="false"></textarea></p>
+                                                 <label class="control-label" for="message">Message:</label>
+                                                 <div class="controls">
+                                                     <textarea id="message" class="input-medium" name="message" rows="7" cols="60" data-val="true" data-val-required="*Required Field"></textarea>
+                                                     <span class="field-validation-valid" data-valmsg-for="message" data-valmsg-replace="true"></span>
+                                                 </div>
                                              </div>
                                          </div>
                                          <div class="e-divider-1"></div>
@@ -315,7 +324,7 @@
                              <aside id="about-widget" class="widget widget_about">
                                  <div class="text-center widget-wrap">
                                      <div class="e-divider-4"></div>
-                                     <img class="img-circle  author-img" src="assets/custom/images/userpic05.jpg" alt="01">
+                                     <img class="img-circle  author-img center-block" src="~/Content/Template/img/JusticeInstagram/justiceWebsite.jpg" alt="01" width="300" height="230">
                                      <div class="e-divider-3"></div>
                                      <h5 class="hello">Hi! I am Justice</h5>
                                      <p>Working as a fashion designer can just as well mean supervising a design team at a sportswear company as producing a label under your own name. </p>
@@ -367,7 +376,7 @@
                                  <div class="clearfix"></div>
                              </aside>
                              <!--/Newsletter Widget-->
-                             <!--Resent Posts Widget-->
+                             <!--Recent Posts Widget-->
                              <aside id="resent-widget" class="widget widget_recent_post">
                                  <div class="title widget-title lined">Recent Post</div>
                                  <div>
@@ -406,27 +415,7 @@
                                  <div class="e-divider-4"></div>
                                  <div class="clearfix"></div>
                              </aside>
-                             <!--/Resent Posts Widget-->
-                             <!--Instagram Widget-->
-                             <aside id="instagram-widget" class="widget widget_instagram">
-                                 <div class="title widget-title lined">Instagram</div>
-                                 <div>
-                                     <div class="media">
-                                         <div class="media-body"><img src="assets/custom/images/instagram/12328429_1661245097460326_255494091_n.jpg" class="img-responsive" alt="01"></div>
-                                         <div class="media-body"><img src="assets/custom/images/instagram/12599154_962398730508083_979241627_n.jpg" class="img-responsive" alt="01"></div>
-                                         <div class="media-body"><img src="assets/custom/images/instagram/12677660_174383292934538_1188800865_n.jpg" class="img-responsive" alt="01"></div>
-                                         <div class="media-body"><img src="assets/custom/images/instagram/12716546_444262579096572_467284739_n.jpg" class="img-responsive" alt="01"></div>
-                                         <div class="media-body"><img src="assets/custom/images/instagram/12819136_834492543346861_161860596_n.jpg" class="img-responsive" alt="01"></div>
-                                         <div class="media-body"><img src="assets/custom/images/instagram/12826108_260008874330168_1360366906_n.jpg" class="img-responsive" alt="01"></div>
-                                         <div class="media-body"><img src="assets/custom/images/instagram/13098928_1102771833111874_1789875443_n.jpg" class="img-responsive" alt="01"></div>
-                                         <div class="media-body"><img src="assets/custom/images/instagram/13108705_1780772878824561_1506041613_n.jpg" class="img-responsive" alt="01"></div>
-                                         <div class="media-body"><img src="assets/custom/images/instagram/13181405_1079602612133517_832563465_n.jpg" class="img-responsive" alt="01"></div>
-                                     </div>
-                                 </div>
-                                 <div class="e-divider-4"></div>
-                                 <div class="clearfix"></div>
-                             </aside>
-                             <!--/Instagram Widget-->
+                             <!--/Recent Posts Widget-->
                              <!--Categories Widget-->
                              <aside id="categories-widget" class="widget widget_categories">
                                  <div class="title widget-title lined">Categories</div>

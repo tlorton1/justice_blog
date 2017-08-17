@@ -47,7 +47,9 @@
                         <div class="container">
                             <!-- Brand and toggle get grouped for better mobile display -->
                             <div class="navbar-header">
-                                <h1 class="text-center"><a href="~/Views/Home/Index.cshtml">Justice Ellen</a></h1>
+                                <h1 class="text-center">
+                                    <a>@Html.ActionLink("Justice Ellen", "Index", "Home")</a>
+                                </h1>
                                 <span class="small subtitle"><span class="lined">Mindfulness, Health, and above all: Love</span></span>
                                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
                                     <span class="sr-only">Toggle navigation</span>
@@ -83,7 +85,7 @@
                     <div class="container">
                         <div class="text-center"><div class="ornament-divider-fullwidth"><i class="flaticon-art-3"></i></div></div>
                         <div class="text-center">
-                            <h3 class="font-accident-two-normal e-uppercase">Enjoy My Instagram Feed</h3>
+                            <h3 class="font-accident-two-normal lined e-uppercase">Enjoy My Instagram Feed</h3>
                             <!--<h5 class="font-accident-one-bold e-uppercase hovercolor">Working hard and making the success</h5>-->
                             <!--<div class="e-divider-1"></div>-->
                             <p class="small color05">
@@ -117,7 +119,7 @@
                             <div id="footer-wrapper" class="">
                                 <div class="container">
                                     <div class="row">
-                                        <div class="col-md-4">
+                                        <div class="col-md-6 text-left">
                                             <div class="footer-sign">
                                                 <i class="flaticon-beautiful-lotus-flower"></i>
                                             </div>
@@ -127,7 +129,7 @@
                                                 <div class="e-divider-2"></div>
                                             </div>
                                         </div>
-                                        <div class="col-md-3">
+                                        <div class="col-md-6 text-right">
                                             <!--<div class="e-divider-1"></div>-->
                                             <div class="follow">
                                                 <ul class="list-inline social">
@@ -138,47 +140,61 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="row">
-                                        <div class="col-md-4 col-sm-6 col-xs-12">
-                                            <div class="infoblock">
-                                                <!-- About Widget -->
-                                                <p class="small color06">Elegant Blog HTML Template. <br>Clean, minimalist and awesome<br>template for blogging based on the latest <br>Bootstrap 3.3.6.</p>
-                                                <div class="e-divider-2"></div>
-                                                <!-- / About Widget -->
-                                            </div>
-                                        </div>
-                                        <div class="col-md-3 col-sm-6 col-xs-12 mb-sm-30 mb-xs-0">
-                                            <div class="infoblock">
-                                                <!-- Contacts Widget -->
-                                                <div class="navlinks">
-                                                    <a href="#!"><p>Story</p></a>
-                                                    <a href="#!"><p>Travel</p></a>
-                                                    <a href="#!"><p>Fashion Design</p></a>
-                                                    <a href="#!"><p>Portfolio</p></a>
-                                                    <a href="#!"><p>Buy</p></a>
+
+                                    <div class="col-sm-12" style="margin-left: 60px; margin-top: 40px;">
+                                        <div class="row">
+                                            <div class="col-sm-7 five-three">
+                                                <div class="row">
+                                                    <div class="col-sm-4">
+                                                        <div class="infoblock">
+                                                            <!-- Contacts Widget -->
+                                                            <div class="navlinks">
+                                                                <a href="#!"><p>Story</p></a>
+                                                                <a href="#!"><p>Travel</p></a>
+                                                                <a href="#!"><p>Fashion Design</p></a>
+                                                            </div>
+                                                            <!-- / Contacts Widget -->
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-4">
+                                                        <div class="flaticon-filler">
+                                                            <div class="ornament-divider-fullwidth"><i class="flaticon-lily"></i></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-4">
+                                                        <div class="infoblock">
+                                                            <div class="navlinks">
+                                                                <a href="#!"><p>Brands</p></a>
+                                                                <a href="#!"><p>Schedule</p></a>
+                                                                <a href="#!"><p>Blog</p></a>
+                                                            </div>
+                                                        </div>
+                                                    </div><!-- end inner row -->
                                                 </div>
-                                                <!-- / Contacts Widget -->
                                             </div>
-                                        </div>
-                                        <div class="col-md-2 col-sm-6 col-xs-12">
-                                            <div class="infoblock">
-                                                <div class="navlinks">
-                                                    <a href="#!"><p>Brands</p></a>
-                                                    <a href="#!"><p>Schedule</p></a>
-                                                    <a href="#!"><p>Blog</p></a>
-                                                    <a href="#!"><p>Featured</p></a>
-                                                </div>
+                                            <div class="col-sm-5 five-two">
+                                                <div class="row">
+                                                    <div class="col-sm-6">
+                                                        <div class="flaticon-filler">
+                                                            <div class="ornament-divider-fullwidth"><i class="flaticon-lily"></i></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-6">
+                                                        <div class="infoblock">
+                                                            <div class="navlinks">
+                                                                <a href="#!"><p>Portfolio</p></a>
+                                                                <a href="#!"><p>Buy</p></a>
+                                                                <a href="#!"><p>Featured</p></a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div><!-- end inner row -->
                                             </div>
-                                        </div>
-                                        <div class="col-md-3 col-sm-6 col-xs-12">
-                                            <div class="flaticon-filler">
-                                                <div class="ornament-divider-fullwidth"><i class="flaticon-lily"></i></div>
-                                            </div>
-                                        </div>
+                                        </div>​<!-- end outer row -->
                                     </div>
                                 </div>
                             </div>
-                            <div class="e-divider-5"></div>
+                            <div class="e-divider-1"></div>
                             <div id="copyrights-wrapper" class="bg-color00">
                                 <div class="container">
                                     <div class="copyright">

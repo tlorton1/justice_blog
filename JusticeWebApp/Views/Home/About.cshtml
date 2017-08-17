@@ -92,7 +92,7 @@
                <div class="share-tag-box">
                   <div class="row">
                      <div class="col-md-12">
-                        <h4 class="darkrose lined">Share This</h4>
+                        <h4 class="darkrose lined text-center">Share This</h4>
                         <ul class="list-inline social share"><!-- Social Share -->
                             <li><a target="_blank" href="https://www.facebook.com/justice.allegar" class="rst-icon-facebook"><i class="fa fa-facebook"></i></a></li>
                             <li><a target="_blank" href="https://www.pinterest.com/allegar/" class="rst-icon-pinterest"><i class="fa fa-pinterest"></i></a></li>
@@ -102,7 +102,6 @@
                   </div>
                </div>
             </div>
-            <div class="e-divider-6"></div>
          </section>
 
          <!--Comment Section-->
@@ -116,20 +115,29 @@
 
                   <div class="col-md-12">
                      <form action="#" method="post" novalidate="novalidate">
-                        <div class="row">
-                           <div class="col-md-4">
-                              <p><label>Name*</label><input type="text" name="your-name" value="" size="60" class="" aria-required="true" aria-invalid="false"></p>
-                           </div>
-                           <div class="col-md-4">
-                              <p><label>Email*</label><input type="text" name="your-email" value="" size="60" class="" aria-required="true" aria-invalid="false"></p>
-                           </div>
-                           <div class="col-md-4">
-                              <p><label>Website</label><input type="text" name="your-website" value="" size="60" class="" aria-required="true" aria-invalid="false"></p>
-                           </div>
-                           <div class="col-md-12">
-                              <p><label>Message</label><textarea name="your-message" cols="60" rows="3" class="" aria-invalid="false"></textarea></p>
-                           </div>
-                        </div>
+                         <div class="row">
+                             <div class="col-md-6">
+                                 <label class="control-label" for="name">Name:</label>
+                                 <div class="controls">
+                                     <input type="text" class="input-medium" id="name" name="name" data-val="true" data-val-required="*Required Field">
+                                     <span class="field-validation-valid" data-valmsg-for="name" data-valmsg-replace="true"></span>
+                                 </div>
+                             </div>
+                             <div class="col-md-6">
+                                 <label class="control-label" for="email">Email:</label>
+                                 <div class="controls">
+                                     <input type="email" class="input-medium" id="email" name="email" data-val="true" data-val-required="*Required Field" data-val-email="Not Valid">
+                                     <span class="field-validation-valid" data-valmsg-for="email" data-valmsg-replace="true"></span>
+                                 </div>
+                             </div>
+                             <div class="col-md-12">
+                                 <label class="control-label" for="message">Message:</label>
+                                 <div class="controls">
+                                     <textarea id="message" class="input-medium" name="message" rows="7" cols="60" data-val="true" data-val-required="*Required Field"></textarea>
+                                     <span class="field-validation-valid" data-valmsg-for="message" data-valmsg-replace="true"></span>
+                                 </div>
+                             </div>
+                         </div>
                         <div class="e-divider-1"></div>
                         <p><button type="button" class="btn btn-rose">Post Comment</button></p>
                      </form>
