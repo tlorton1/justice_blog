@@ -17,7 +17,19 @@ namespace JusticeWebApp
                 name: "Blog Posts",
                 url: "Post",
                 defaults: new { controller = "Home", action = "Post"}
-                );
+            );
+
+            routes.MapRoute(
+                name: "Contact Me",
+                url: "ContactMe",
+                defaults: new { controller = "Home", action = "Contact" }
+            );
+
+            routes.MapRoute(
+                name: "About Me",
+                url: "AboutMe",
+                defaults: new { controller = "Home", action = "About" }
+            );
 
             routes.MapRoute(
                 name: "Default",
