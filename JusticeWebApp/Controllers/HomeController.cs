@@ -29,6 +29,7 @@ namespace JusticeWebApp.Controllers
             return View();
         }
 
+        [Authorize]
         public ActionResult Contact()
         {
             ViewBag.Message = "Your contact page.";
@@ -39,6 +40,13 @@ namespace JusticeWebApp.Controllers
         public ActionResult Post()
         {
             ViewBag.Message = "Your blog post page.";
+
+            return View();
+        }
+
+        public ActionResult Manage()
+        {
+            ViewBag.Message = "Manage Accounts page.";
 
             return View();
         }
@@ -58,5 +66,6 @@ namespace JusticeWebApp.Controllers
 
             return View();
         }
+
     }
 }

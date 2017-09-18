@@ -32,6 +32,12 @@ namespace JusticeWebApp
             );
 
             routes.MapRoute(
+                name: "Manage Account",
+                url: "Account",
+                defaults: new { controller = "Home", action = "Manage" }
+            );
+
+            routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
                 defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }

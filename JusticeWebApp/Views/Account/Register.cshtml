@@ -1,0 +1,50 @@
+﻿@model JusticeWebApp.Models.RegisterModel
+@{
+    ViewBag.Title = "Register";
+}
+
+<div id="content">
+    <section id="Register">
+        <div class="container">
+            <div class="row">
+                <article id="01" class="page-block col-md-12 page hentry">
+                    <hgroup class="title">
+                        <h1>@ViewBag.Title.</h1>
+                        <h2>Create a new account.</h2>
+                    </hgroup>
+
+                    @using (Html.BeginForm())
+                    {
+                        @Html.AntiForgeryToken()
+                        @Html.ValidationSummary()
+
+                        <fieldset>
+                            <legend>Registration Form</legend>
+                            <ol>
+                                <li>
+                                    @Html.LabelFor(m => m.UserName)
+                                    @Html.TextBoxFor(m => m.UserName)
+                                </li>
+                                <li>
+                                    @Html.LabelFor(m => m.Password)
+                                    @Html.PasswordFor(m => m.Password)
+                                </li>
+                                <li>
+                                    @Html.LabelFor(m => m.ConfirmPassword)
+                                    @Html.PasswordFor(m => m.ConfirmPassword)
+                                </li>
+                            </ol>
+                            <input type="submit" value="Register" />
+                        </fieldset>
+                    }
+                    </article>
+                </div>
+            </div>
+    </section>
+</div>
+
+@section scripts
+{
+    <script src="~/Scripts/jquery.validate.min.js"></script>
+    <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+}
