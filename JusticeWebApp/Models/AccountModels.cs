@@ -73,6 +73,11 @@ namespace JusticeWebApp.Models
     public class RegisterModel
     {
         [Required]
+        [DataType(DataType.EmailAddress)]
+        [Display(Name = "Email")]
+        public string Email { get; set; }
+
+        [Required]
         [Display(Name = "User name")]
         public string UserName { get; set; }
 

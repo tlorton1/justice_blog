@@ -8,6 +8,7 @@ using System.Web.Mvc;
 
 namespace JusticeWebApp.Controllers
 {
+    [Authorize]
     public class HomeController : Controller
     {
         private IMessageService _mail;
@@ -29,7 +30,6 @@ namespace JusticeWebApp.Controllers
             return View();
         }
 
-        [Authorize]
         public ActionResult Contact()
         {
             ViewBag.Message = "Your contact page.";

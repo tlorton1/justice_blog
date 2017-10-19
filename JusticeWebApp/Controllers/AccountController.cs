@@ -53,7 +53,7 @@ namespace JusticeWebApp.Controllers
         public ActionResult LogOff()
         {
             WebSecurity.Logout();
-            //Session.Abandon();
+            Session.Abandon();
             return RedirectToAction("Index", "Home");
         }
 
@@ -124,7 +124,7 @@ namespace JusticeWebApp.Controllers
 
         //
         // GET: /Account/Manage
-
+       
         public ActionResult Manage(ManageMessageId? message)
         {
             ViewBag.StatusMessage =

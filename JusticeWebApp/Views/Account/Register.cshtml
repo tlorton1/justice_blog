@@ -22,6 +22,10 @@
                             <legend>Registration Form</legend>
                             <ol>
                                 <li>
+                                    @Html.LabelFor(m => m.Email)
+                                    @Html.TextBoxFor(m => m.Email)
+                                </li>
+                                <li>
                                     @Html.LabelFor(m => m.UserName)
                                     @Html.TextBoxFor(m => m.UserName)
                                 </li>
@@ -34,7 +38,7 @@
                                     @Html.PasswordFor(m => m.ConfirmPassword)
                                 </li>
                             </ol>
-                            <input type="submit" value="Register" />
+                            <input class="newsletter-submit btn btn-lg btn-blk" type="submit" value="Register" />
                         </fieldset>
                     }
                     </article>
