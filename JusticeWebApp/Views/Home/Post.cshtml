@@ -1,4 +1,6 @@
-﻿@{
+﻿@model IEnumerable<JusticeWebApp.Data.Comment>
+
+@{
     ViewBag.Title = "Blog Posts";
 }
 @section scripts
@@ -174,7 +176,7 @@
                                      </div>
                                  </section>
 
-                                 <!--Comments-->
+                                 @*<!--Comments-->
                                  <section id="comments" class="">
                                      <div class="e-divider-2"></div>
                                      <h3 class="font-accident-two-normal e-uppercase">4 comments:</h3>
@@ -194,7 +196,15 @@
                                                  <div class="comment">
                                                      <p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.</p>
                                                  </div>
-                                                 <p>@Html.ActionLink("Log In to Reply", "Login", "Account")</p>
+                                                 @if (Request.IsAuthenticated)
+                                                 {
+                                                     <textarea cols="30" rows="5"></textarea>
+                                                             <button class="btn-blk btn-sm btn" value="Reply">Reply</button>
+                                                 }
+                                                 else
+                                                 {
+                                                     <p>@Html.ActionLink("Log In to Reply", "Login", "Account")</p>
+                                                 }
 
                                                  <!-- Nested media object -->
                                                  <div class="media">
@@ -211,7 +221,15 @@
                                                          <div class="comment">
                                                              <p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.</p>
                                                          </div>
-                                                         <p>@Html.ActionLink("Log In to Reply", "Login", "Account")</p>
+                                                         @if (Request.IsAuthenticated)
+                                                         {
+                                                             <textarea cols="30" rows="5"></textarea>
+                                                             <button class="btn-blk btn-sm btn" value="Reply">Reply</button>
+                                                         }
+                                                         else
+                                                         {
+                                                             <p>@Html.ActionLink("Log In to Reply", "Login", "Account")</p>
+                                                         }
                                                          <!-- Nested media object -->
                                                          <div class="media">
                                                              <div class="media-left">
@@ -227,7 +245,15 @@
                                                                  <div class="comment">
                                                                      <p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.</p>
                                                                  </div>
-                                                                 <p>@Html.ActionLink("Log In to Reply", "Login", "Account")</p>
+                                                                 @if (Request.IsAuthenticated)
+                                                                 {
+                                                                     <textarea cols="30" rows="5"></textarea>
+                                                                     <button class="btn-blk btn-sm btn" value="Reply">Reply</button>
+                                                                 }
+                                                                 else
+                                                                 {
+                                                                     <p>@Html.ActionLink("Log In to Reply", "Login", "Account")</p>
+                                                                 }
                                                              </div>
                                                          </div>
                                                      </div>
@@ -247,28 +273,69 @@
                                                          <div class="comment">
                                                              <p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.</p>
                                                          </div>
-                                                         <p>@Html.ActionLink("Log In to Reply", "Login", "Account")</p>
+                                                         @if (Request.IsAuthenticated)
+                                                         {
+                                                             <textarea cols="30" rows="5"></textarea>
+                                                             <button class="btn-blk btn-sm btn" value="Reply">Reply</button>
+                                                         }
+                                                         else
+                                                         {
+                                                             <p>@Html.ActionLink("Log In to Reply", "Login", "Account")</p>
+                                                         }
                                                      </div>
                                                  </div>
                                              </div>
                                          </li>
                                      </ul>
                                  </section>
-                                 <div class="e-divider-8"></div>
+                                 <div class="e-divider-8"></div>*@
+
+                                 @foreach (var comment in Model)
+                                 {
+                                     <div>@comment.Name</div>
+                                     <div> -- @comment.Message</div>
+                                 }
 
                                  <!--Post Comment-->
                                  <section id="post-comment" class="">
 
                                      <div class="e-divider-2"></div>
                                      <h3 class="font-accident-two-normal e-uppercase">Leave a Comment</h3>
-                                     <div class="e-divider-3"></div>
+                                     <div class="e-divider-1"></div>
 
-                                     <form action="#" method="post" novalidate="novalidate">
+                                        @*@using (Html.BeginForm("PostComment", "Home"))
+                                        {
+                                            @Html.AntiForgeryToken()
+                                            @Html.ValidationSummary()
+
+                                            <fieldset>
+                                                <ol>
+                                                    <li>
+                                                        @Html.LabelFor(m => m.Comment.Name)
+                                                        @Html.TextBoxFor(m => m.Name)
+                                                        @Html.ValidationMessageFor(m => m.Name)
+                                                    </li>
+                                                    <li>
+                                                        @Html.LabelFor(m => m.Email)
+                                                        @Html.TextBoxFor(m => m.Email)
+                                                        @Html.ValidationMessageFor(m => m.Email)
+                                                    </li>
+                                                    <li>
+                                                        @Html.LabelFor(m => m.Message)
+                                                        @Html.TextAreaFor(m => m.Message)
+                                                        @Html.ValidationMessageFor(m => m.Message)
+                                                    </li>
+                                                </ol>
+                                                <input class="btn btn-sm btn-blk" type="submit" value="Post Comment" />
+                                            </fieldset>
+                                        }*@
+
+                                     @*<form action="PostComment" method="post" novalidate="novalidate">
                                          <div class="row">
                                              <div class="col-md-6">
                                                  <label class="control-label" for="name">Name:</label>
                                                  <div class="controls">
-                                                     <input type="text" class="input-medium" id="name" name="name" data-val="true" data-val-required="*Required Field">
+                                                     <input type="text" class="input-medium" id="name" value="@User.Identity.Name" name="name" data-val="true" data-val-required="*Required Field">
                                                      <span class="field-validation-valid" data-valmsg-for="name" data-valmsg-replace="true"></span>
                                                  </div>
                                              </div>
@@ -288,8 +355,8 @@
                                              </div>
                                          </div>
                                          <div class="e-divider-1"></div>
-                                         <p><button type="button" class="btn btn-lg btn-blk">Post Comment</button></p>
-                                     </form>
+                                         <p><button id="postComment" name="postComment" type="button" class="btn btn-lg btn-blk">Post Comment</button></p>
+                                     </form>*@
 
                                  </section>
 

@@ -11,6 +11,7 @@ namespace JusticeWebApp.App_Start
     using Ninject;
     using Ninject.Web.Common;
     using JusticeWebApp.Services;
+    using JusticeWebApp.Data;
 
     public static class NinjectWebCommon 
     {
@@ -67,6 +68,9 @@ namespace JusticeWebApp.App_Start
 #else
             kernel.Bind<IMessageService>().To<MessageService>().InRequestScope();
 #endif
+
+            kernel.Bind<PostContext>().To<PostContext>().InRequestScope();
+            kernel.Bind<IPostRepository>().To<PostRepository>().InRequestScope();
         }        
     }
 }

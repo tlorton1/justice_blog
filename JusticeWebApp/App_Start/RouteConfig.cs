@@ -37,6 +37,12 @@ namespace JusticeWebApp
                 defaults: new { controller = "Home", action = "Manage" }
             );
 
+            //routes.MapRoute(
+            //    name: "Already Logged In",
+            //    url: "AlreadyLoggedIn",
+            //    defaults: new { controller = "Account", action = "Login" }
+            //);
+
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",

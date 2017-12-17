@@ -1,4 +1,5 @@
-﻿using JusticeWebApp.Models;
+﻿using JusticeWebApp.Data;
+using JusticeWebApp.Models;
 using JusticeWebApp.Services;
 using System;
 using System.Collections.Generic;
@@ -8,14 +9,13 @@ using System.Web.Mvc;
 
 namespace JusticeWebApp.Controllers
 {
-    [Authorize]
     public class HomeController : Controller
     {
-        private IMessageService _mail;
+        private IPostRepository _repo;
 
-        public HomeController(IMessageService mail)
+        public HomeController(IPostRepository repo)
         {
-            _mail = mail;
+            _repo = repo;
         }
 
         public ActionResult Index()
@@ -23,6 +23,7 @@ namespace JusticeWebApp.Controllers
             return View();
         }
 
+        [Authorize]
         public ActionResult About()
         {
             ViewBag.Message = "Your application description page.";
@@ -30,6 +31,7 @@ namespace JusticeWebApp.Controllers
             return View();
         }
 
+        [Authorize]
         public ActionResult Contact()
         {
             ViewBag.Message = "Your contact page.";
@@ -37,13 +39,20 @@ namespace JusticeWebApp.Controllers
             return View();
         }
 
+        [Authorize]
         public ActionResult Post()
         {
             ViewBag.Message = "Your blog post page.";
 
-            return View();
+            var comments = _repo.GetComments()
+                                .OrderByDescending(t => t.Created)
+                                .Take(10)
+                                .ToList();
+
+            return View(comments);
         }
 
+        [Authorize]
         public ActionResult Manage()
         {
             ViewBag.Message = "Manage Accounts page.";
@@ -51,21 +60,32 @@ namespace JusticeWebApp.Controllers
             return View();
         }
 
-        [HttpPost]
-        public ActionResult Contact(ContactModel model)
-        {
-            var msg = string.Format("Name: {1}{0}Email:{2}{0}Message:{3}{0}", Environment.NewLine, 
-                model.Name,
-                model.Email,
-                model.Message);
+        //[HttpPost]
+        //public ActionResult Contact(ContactModel model)
+        //{
+        //    var msg = string.Format("Name: {1}{0}Email:{2}{0}Message:{3}{0}", Environment.NewLine, 
+        //        model.Name,
+        //        model.Email,
+        //        model.Message);
 
-            if (_mail.SendMessage("Name", "test@email.com", "Message"))
-            {
-                ViewBag.MailSent = true;
-            }
+        //    if (_mail.SendMessage("Name", "test@email.com", "Message"))
+        //    {
+        //        ViewBag.MailSent = true;
+        //    }
 
-            return View();
-        }
+        //    return View();
+        //}
+
+        //[HttpPost]
+        //public ActionResult PostComment()
+        //{
+        //    var comments = _repo.GetComments()
+        //                        .OrderByDescending(t => t.Created)
+        //                        .Take(10)
+        //                        .ToList();
+
+        //    return View("../Views/Home/Post", model);
+        //}
 
     }
 }

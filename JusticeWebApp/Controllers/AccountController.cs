@@ -23,6 +23,22 @@ namespace JusticeWebApp.Controllers
         [AllowAnonymous]
         public ActionResult Login(string returnUrl)
         {
+            bool val1 = (System.Web.HttpContext.Current.User != null) && (System.Web.HttpContext.Current.User.Identity.IsAuthenticated);
+            if (val1 == true)
+            {
+                return RedirectToAction("AlreadyLoggedIn");
+            }
+            else
+            {
+                ViewBag.ReturnUrl = returnUrl;
+                return View();
+            }
+        }
+
+        //
+        // GET: /Account/AlreadyLoggedIn
+        public ActionResult AlreadyLoggedIn(string returnUrl)
+        {
             ViewBag.ReturnUrl = returnUrl;
             return View();
         }
@@ -42,6 +58,7 @@ namespace JusticeWebApp.Controllers
 
             // If we got this far, something failed, redisplay form
             ModelState.AddModelError("", "The user name or password provided is incorrect.");
+            ModelState.AddModelError("", "If you are a new user please Register."); 
             return View(model);
         }
 

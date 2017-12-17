@@ -1,0 +1,25 @@
+﻿@model JusticeWebApp.Models.LoginModel
+
+@{
+    ViewBag.Title = "Already Logged In";
+}
+@section scripts
+{
+    <script src="~/Scripts/jquery.validate.min.js"></script>
+    <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+}
+
+<div id="content">
+    <p class="e-block-centered">You are already logged in.</p>
+    <button class="btn btn-sm btn-blk" type="submit" style="display: block; margin: 0 auto;">
+        @using (Html.BeginForm("LogOff", "Account", FormMethod.Post,
+                                new { id = "logoutForm" }))
+        {
+
+            @Html.AntiForgeryToken()
+            <a style="color: white;" href="javascript:document.getElementById('logoutForm').submit()">Log Out</a>
+
+        }
+    </button>
+    <div style="margin-bottom: 20px"></div>
+</div>
